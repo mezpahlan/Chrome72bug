@@ -10,15 +10,16 @@ When debugging what the WebView was doing we noticed that, whilst we were passin
 Upon closer inspection it appeared to break before the first use of the # character in the inline CSS. So our assumption is that something between Chrome 71 and Chrome 72 broke handling of this use of CSS.
 
 As far as I am aware what we are trying to render in the WebView is a valid, albeit poor, use of HTML / CSS and it should work as before.
-(1) Build and load the example project onto an Android device.
-(2) Ensure that you have Chrome 71 (I used 71.0.3578.99) installed as the stable version of Chrome.
-(3) Ensure that you have Chrome 72 (72.0.3626.73) installed as the beta version of Chrome.
-(4) Select the stable version (Chrome 71) from the Developer Options -> WebView Implementation.
-(5) Run the Chrome72Bug example app.
-(6) Select the FAB button to load an example HTML into the WebView.
-(7) Switch to the beta version (Chrome 72) from the Developer Options -> WebView Implemenation.
-(8) Run the Chrome72Bug example app.
-(9) Select the FAB button to load an example HTML into the WebView.
+
+# Build and load the example project onto an Android device.
+# Ensure that you have Chrome 71 (I used 71.0.3578.99) installed as the stable version of Chrome.
+# Ensure that you have Chrome 72 (72.0.3626.73) installed as the beta version of Chrome.
+# Select the stable version (Chrome 71) from the Developer Options -> WebView Implementation.
+# Run the Chrome72Bug example app.
+# Select the FAB button to load an example HTML into the WebView.
+# Switch to the beta version (Chrome 72) from the Developer Options -> WebView Implemenation.
+# Run the Chrome72Bug example app.
+# Select the FAB button to load an example HTML into the WebView.
 
 ### Expected result
 After step (6) and (9) the example HTML will be rendered in the WebView.
