@@ -2,6 +2,11 @@
 
 Example app that demonstrate a possible bug in Chrome 72 WebView on Android. Clone the repo, load in to Android Studio, build and push to a device.
 
+## Note
+
+Turns out this is an issue to do with how we are passing the HTML into the web view. See the `fixed` branch for details and the [bug report](https://crbug.com/927408) for discussion.
+
+
 ## Background
 We received a report from one of our users today saying that a certain part of our app that relies on a WebView stopped working. We tracked it down to being a difference between Chrome 71 and Chrome 72 installed on the device.
 
