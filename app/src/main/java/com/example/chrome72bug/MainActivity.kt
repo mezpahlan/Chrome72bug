@@ -1,11 +1,13 @@
 package com.example.chrome72bug
 
 import android.os.Bundle
+import android.util.Base64
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -220,8 +222,8 @@ Chrome CSS checking Service
             """
 
 
-
-            webView.loadData(data, "text/html", "UTF-8")
+            val base64 = Base64.encodeToString(data.toByteArray(), Base64.DEFAULT)
+            webView.loadData(base64, "text/html; charset=utf-8", "base64")
         }
     }
 
